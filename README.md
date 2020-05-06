@@ -1,2 +1,2 @@
 # my_codes
-It conatins my works.
+It contains my works.
