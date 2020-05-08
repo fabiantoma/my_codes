@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Felhasználó neve</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="felhasznalo.js"></script>
+    <style>
+      #combobox {
+        display: none;
+      }
+      #panel {
+        display: none;
+        background-color: lemonchiffon;
+        width: 300px;
+        height: 400px;
+      }
+      #image {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript záróvizsga</h1>
+    <br />
+    <h2>Felhasználó neve</h2>
+    <br />
+    <input type="text" name="fullName" required />
+    <br />
+    <button id="start" type="button">Start</button>
+    <br />
+    <div id="combobox" class="display:none">
+      <input type="checkbox" id="panelBox" onchange="" />Be/Ki
+      <br />
+      <select id="mySelect">
+        <option id="white" value="white" selected>white</option>
+        <option id="yellow" value="yellow">yellow</option>
+        <option id="lightgrey" value="lightgrey">lightgrey</option>
+        <option id="lightblue" value="lightblue">lightblue</option>
+      </select>
+      <br />
+      <br />
+      <button type="button" id="open">Open panel</button>
+    </div>
+    <br />
+    <div id="panel">
+      <h3>Háromszög kerület/terület számítása</h3>
+      <br />
+      <select id="area">
+        <option>Kerület</option>
+        <option>Terület</option>
+      </select>
+      <br />
+      <br />
+      Alap<input type="number" name="" id="aOldal" />
+      <br />
+      <br />
+      Egyik oldal<input type="number" name="" id="bOldal" />
+      <br />
+      <br />
+      Másik oldal<input type="number" name="" id="cOldal" />
+      <br />
+      <br />
+      <div id="secondData">Magasság<input type="number" name="" id="M" /></div>
+      <br />
+      <br />
+      <button type="button" id="count">Számol</button>
+      <br />
+      <div id="res">
+        <p>Terület: <span id="terulet"></span></p>
+        <p>Kerület: <span id="kerulet"></span></p>
+        <br />
+        <div><p id="haromszogek"></p></div>
+      </div>
+      <div id="image">
+        <img
+          src="pictures/egyenlo_oldalu.png"
+          id="shapeImage"
+          alt="Shape Image"
+        />
+        <button type="button" id="close">Close</button>
+      </div>
+    </div>
+    <br />
+    <br /><br />
+  </body>
+</html>

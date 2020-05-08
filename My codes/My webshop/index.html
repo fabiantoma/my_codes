@@ -1,0 +1,302 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .hide-element {
+        display: none;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        fetchData();
+
+        editItem = function (id) {
+          //a változó egy függvény lett,benne megadjuk az id amit
+          readCategories(); //be olvassa az értkeket mert be akarom tölteni a modalba//
+          $("#updateButton").removeClass("hide-element");
+          $("#insertButton").addClass("hide-element");
+          readSingeItem(id); //kiolvassa azt az egy sort ahol az editItem klikk esemény megtörtént
+        };
+        deleteItem = function (id) {
+          $.ajax({
+            type: "POST", //metódusa az post lesz//
+            url: "http://localhost/30_ora/delete.php",
+            contentType: "application/json", //json be küldjük//
+            data: JSON.stringify({
+              id: id,
+            }),
+            success: function (data) {
+              fetchData();
+            },
+            error: function (msg) {
+              alert("Error was occured");
+            },
+          });
+        };
+
+        function readSingeItem(id) {
+          $.ajax({
+            type: "GET",
+            url: "http://localhost/30_ora/read_single.php?id=" + id + "",
+            success: function (data) {
+              fillModal(data);
+            },
+            error: function (msg) {
+              alert("Error was occured: ", msg);
+            },
+          });
+        }
+
+        function fillModal(data) {
+          $("#rowId").val(data[0].id); //relytett input mező amit felhasználunk az sql parancsban//
+          $("#body").val(data[0].body);
+          $("#author").val(data[0].author);
+          $("#title").val(data[0].title);
+          $("#categoryGroup").val(data[0].category_id);
+
+          $("#apiCrudModal").modal("show");
+        }
+
+        function fetchData() {
+          //a html oldalon ez frissíti az adatokat az adattáblából//
+          //get-es endpointot kérünk le adatokat a leírt url-ről,Meghívja ha sikeres akkor a benne lévő függvények lefutnak//
+          $.ajax({
+            type: "GET",
+            url: "http://localhost/30_ora/read.php",
+            success: function (data) {
+              //ebben létrehozunk a egy értéket //
+              var values = "";
+
+              for (var i = 0; i < data.length; i++) {
+                //bejárjuk és a létrehozott táblázatba a az elemekhez hozzárendelem//
+                values += "<tr>";
+                values += "<td>" + data[i].author + "</td>";
+                values += "<td>" + data[i].body + "</td>";
+                values += "<td>" + data[i].name + "</td>";
+                values += "<td>" + data[i].title + "</td>";
+                values +=
+                  "<td><button type='button' class='btn btn-primary' id='editButton' name='editButton' onclick='editItem(" +
+                  data[i].id +
+                  ")'>Edit</button></td>";
+                values +=
+                  "<td><button type='button' class='btn btn-danger' id='deleteButton' name='deleteButton' onclick='deleteItem(" +
+                  data[i].id +
+                  ")'>Delete</button></td>";
+                values += "</tr>";
+              } //ezekkel tudom szerkeszteni//
+              $("tbody").html(values); // és a tbodyhoz hozzáfűzöm a html függvénnyel//
+            },
+            error: function (msg) {
+              alert("Error was occured: ", msg);
+            },
+          });
+        }
+
+        $("#addButton").click(function () {
+          readCategories();
+          $(".modal-title").text("Add Data"); //a modal címét adjuk meg//
+          $("#updateButton").addClass("hide-element");
+          $("#insertButton").removeClass("hide-element");
+          $("#apiCrudModal").modal("show");
+        });
+
+        $("#insertButton").click(function () {
+          //az általam kitöltött adatokat
+          var bodyValue = $("#body").val();
+          var authorValue = $("#author").val();
+          var titleValue = $("#title").val();
+          var selectedCategoryId = $("#categoryGroup").val(); //kiolvastatom az értékeket//
+
+          var requestObj = {
+            //megfeleltetem a beolvasott értékeket valamilyen...//
+            title: titleValue,
+            body: bodyValue,
+            author: authorValue,
+            category_id: selectedCategoryId,
+          };
+
+          $.ajax({
+            type: "POST",
+            url: "http://localhost/30_ora/create.php", //api endpoint//
+            data: JSON.stringify(requestObj), //alakítom át Jsoné a objektumot//
+            success: function (data) {
+              fetchData(); //küldéssel lefut a fetch data és frissít az új adatokkal//
+            },
+            error: function (msg) {
+              alert("Error was occured: ", msg);
+            },
+          });
+
+          $("#apiCrudModal").modal("hide"); //bezárja a modal ha lefut a progi//
+        });
+
+        $("#updateButton").click(function () {
+          //klikk esemény rákötve a button idijú gombra//
+          var rowId = $("#rowId").val();
+          var bodyValue = $("#body").val();
+          var authorValue = $("#author").val();
+          var titleValue = $("#title").val();
+          var selectedCategoryId = $("#categoryGroup").val(); //
+
+          var requestObj = {
+            //hozzárendeltem a korábban létrehozott api végpontokon lévő értékhez//
+            title: titleValue,
+            body: bodyValue,
+            author: authorValue,
+            category_id: selectedCategoryId,
+            id: rowId,
+          };
+
+          $.ajax({
+            type: "POST",
+            url: "http://localhost/30_ora/update.php", //erre az endpointra küldöm//
+            data: JSON.stringify(requestObj),
+            success: function (data) {
+              //update sikeres akkor frissül//
+              fetchData();
+            },
+            error: function (msg) {
+              alert("Error was occured: ", msg);
+            },
+          });
+          $("#apiCrudModal").modal("hide"); //bezárjuk a modalt//
+        });
+
+        function readCategories() {
+          $.ajax({
+            type: "GET",
+            url: "http://localhost/30_ora/read_categories.php",
+            success: function (data) {
+              var values = "";
+
+              for (var i = 0; i < data.length; i++) {
+                values +=
+                  "<option value=" +
+                  data[i].id +
+                  ">" +
+                  data[i].name +
+                  "</option>";
+              }
+
+              $("#categoryGroup").html(values); //html formátum mert az adatok ilyenben vannak//
+            },
+            error: function (msg) {
+              alert("Error was occured: ", msg);
+            },
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h3>PHP MYSQL CRUD with API</h3>
+      <div>
+        <button
+          type="button"
+          name="addButton"
+          id="addButton"
+          class="btn btn-success btn-xs"
+        >
+          Add
+        </button>
+      </div>
+      <table id="dataTable" class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Author</th>
+            <th>Body</th>
+            <th>Category Name</th>
+            <th>Title</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="apiCrudModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form method="post" id="apiCrudForm">
+            <div class="modal-header">
+              <h4 class="modal-title">Add data</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <label>Id</label>
+                <input type="text" name="rowId" id="rowId" />
+              </div>
+              <div class="form-group">
+                <label>Author</label>
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label>Body</label>
+                <input type="text" name="body" id="body" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label>Categories</label>
+                <select class="form-control" id="categoryGroup"></select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                id="insertButton"
+                name="insertButton"
+                class="btn btn-info"
+              >
+                Insert
+              </button>
+              <button
+                type="button"
+                id="updateButton"
+                name="updateButton"
+                class="btn btn-info"
+              >
+                Update
+              </button>
+              <button
+                type="button"
+                id="closeButton"
+                data-dismiss="modal"
+                class="btn btn-warning"
+              >
+                Close
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
