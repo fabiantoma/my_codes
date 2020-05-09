@@ -1,6 +1,6 @@
 # my_codes
 
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -69,12 +69,12 @@
             <div class="m-2" >
               <h3 class="mainPoints">Hobbies</h3>
               <div class="iconContainer d-flex col-lg-12 justify-content-around">
-                <img class="icons topleft" src="img\motorcyle.jpg" alt="bike">
-              <img class="icons topright" src="img/letöltés.jpg" alt="workout">
+                <img class="icons topleft"  alt="motorbike">
+              <img class="icons topright"  alt="hiking">
             </div>
               <div class="iconContainer d-flex  col-lg-12 justify-content-around">
-                <img class="icons bottomleft" src="img/swimming-icon-vector-2636726.jpg" alt="concert">
-                <img class="icons bottomright" src="img/daddy-bike.jpg" alt="backpack">
+                <img class="icons bottomleft"  alt="swimming">
+                <img class="icons bottomright"  alt="travel">
               </div>
             </div>
           </div>
