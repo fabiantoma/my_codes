@@ -69,12 +69,12 @@
             <div class="m-2" >
               <h3 class="mainPoints">Hobbies</h3>
               <div class="iconContainer d-flex col-lg-12 justify-content-around">
-                <img class="icons topleft"  alt="motorbike">
-              <img class="icons topright"  alt="hiking">
+                 <span>motorbike</span>
+              <span>hiking</span>
             </div>
               <div class="iconContainer d-flex  col-lg-12 justify-content-around">
-                <img class="icons bottomleft"  alt="swimming">
-                <img class="icons bottomright"  alt="travel">
+                <span>swimming</span>
+                 <span>travel</span>
               </div>
             </div>
           </div>
@@ -85,8 +85,8 @@
           <div id="header-outer">
             <div id="header-content" class="text-center m-0">
                 <div id="header">
-                  <p id="name">Tamás Fábián</p>
-                  <p id="profession">Junior Webdeveloper(Fullstack)</p>
+                  <p id="name">Hi,I am Tamás Fábián</p>
+                  <p id="profession">I am a new Junior Webdeveloper(Fullstack)</p>
               </div>
               <ul id="listOnTop">
                 <li><i class="fas fa-mobile-alt"></i><span> +36/302225287</span></li>
