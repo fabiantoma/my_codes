@@ -13,10 +13,7 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
     <link href="https://fonts.googleapis.com/css?family=Mitr|Rajdhani&display=swap" rel="stylesheet">
-    <script
-      src="https://kit.fontawesome.com/b1268a01f2.js"
-      crossorigin="anonymous"
-    ></script>
+   
   </head>
   <body id="page">
     <div class="container container-fluid">
