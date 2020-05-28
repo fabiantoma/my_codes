@@ -1,19 +1,22 @@
 # Tamas Fabian
 
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   
+    <title>Document</title>
     <link rel="stylesheet" href="Assets/mainstyle2.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
     <link href="https://fonts.googleapis.com/css?family=Mitr|Rajdhani&display=swap" rel="stylesheet">
-   
+    <script
+      src="https://kit.fontawesome.com/b1268a01f2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body id="page">
     <div class="container container-fluid">
@@ -63,9 +66,18 @@
                 German - B1-level
               </p>
             </div>
-           
-           
-          
+            <div class="m-2" >
+              <h3 class="mainPoints">Hobbies</h3>
+              <div class="iconContainer d-flex col-lg-12 justify-content-around">
+                <img class="icons topleft" src="img\motorcyle.jpg" alt="bike">
+              <img class="icons topright" src="img/letöltés.jpg" alt="workout">
+            </div>
+              <div class="iconContainer d-flex  col-lg-12 justify-content-around">
+                <img class="icons bottomleft" src="img/swimming-icon-vector-2636726.jpg" alt="concert">
+                <img class="icons bottomright" src="img/daddy-bike.jpg" alt="backpack">
+              </div>
+            </div>
+          </div>
         </div>
         <div
           id="rightMainCol"
@@ -73,37 +85,41 @@
           <div id="header-outer">
             <div id="header-content" class="text-center m-0">
                 <div id="header">
-                  <p id="name">Hi,I am Tamás Fábián</p>
-                  <p id="profession">I am a new Junior Webdeveloper(Fullstack)</p>
+                  <p id="name">Tamás Fábián</p>
+                  <p id="profession">Junior Webdeveloper(Fullstack)</p>
               </div>
               <ul id="listOnTop">
                 <li><i class="fas fa-mobile-alt"></i><span> +36/302225287</span></li>
                 <li><i class="far fa-envelope"></i><span> fabiantoma@gmail.com</span></li>
-                <!-- <li><i class="fas fa-globe"></i> <a href="#">GitHub</a></li> -->
+               
               </ul>
             </div>
           </div>
           <div class="mt-2 ml-3 col-lg-12">
-            <h3 class="pl-2 mainPoints right">Experiences</h3>
+            <h3 class="pl-2 mainPoints right">IT Experiences</h3>
             <ul class="listMiddle">
               <li>
-                <p> <b>2019- |
-                 In summer 2019, I got the opportunity to work with programming when I started my IT studies and I would like to change careers.Currently I am lerning the GIT version control lernng and Laravel framework.
-              
+                <p> <b>2019- Currently |
+                  <br> Aug.2019-April 2020 CheckPointIT-Education Center</b></p>
+                  Nowadays I am learning GIT version control system and Laravel framework.
+               
               </li>
               <hr>
               <li>
- 
+   
+                     </span>
+                     <div id="dots"><b>.    .    .</b></div>
+                  <span>
                     I have gained useful experience in establishing effective team work and appropriate communication.
                     <br>
                     During my services abroad I had the opportunity to use both spoken and written English on a daily basis.</span>
                     <div id="dots"><b>.    .    .</b></div>
-                   
+         
               </li>
             </ul>
           </div>
           <div class="mt-2 ml-3 col-lg-12">
-            <h3 class="pl-2 mainPoints right"> IT Studies</h3>
+            <h3 class="pl-2 mainPoints right">Studies</h3>
             <ul class="listMiddle">
               <li>
                 <p><b>(2019-2020) Checkpoint-IT Educational Center</b></p>
@@ -114,7 +130,27 @@
                   <li>Backend advanced developer(PHP-OOP,SQL,API)</li>
                 </ul>
               </li> 
-            
+              <hr>
+              <li>
+                <p>(2009-2013)University of Szeged</p>
+                <ul>
+                  <li>Faculty of Science and Informatics</li>
+                  <li>Environmental engineer</li>
+                  <li>Condition assessment engineer</li>
+                </ul>
+              </li>
+              <hr>
+              <li>
+                
+              </li>
+              <li>
+                
+                  <ul>
+                    
+                  </ul>
+                </p>
+              </li>
+            </ul>
           </div>
           <div class="mt-2 ml-3 col-lg-12">
               <h3 class="pl-2 mainPoints right">Technological knowledge</h3>
