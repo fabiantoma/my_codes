@@ -67,7 +67,7 @@
               </p>
             </div>
             <div class="m-2" >
-              <h3 class="mainPoints">Hobbies</h3>
+             
               <div class="iconContainer d-flex col-lg-12 justify-content-around">
                 
             </div>
@@ -99,7 +99,7 @@
               <li>
                 <p> <b>2019- Currently |
                   <br> Aug.2019-April 2020 CheckPoint-IT-Education Center</b></p>
-                  Nowadays I am learning GIT version control system and Laravel framework.
+                  Nowdays I am learning GIT version control system and Laravel framework.
                
               </li>
               <hr>
