@@ -63,18 +63,9 @@
                 German - B1-level
               </p>
             </div>
-            <div class="m-2" >
-              <h3 class="mainPoints">Hobbies</h3>
-              <div class="iconContainer d-flex col-lg-12 justify-content-around">
-                 <span>motorbike</span>
-              <span>hiking</span>
-            </div>
-              <div class="iconContainer d-flex  col-lg-12 justify-content-around">
-                <span>swimming</span>
-                 <span>travel</span>
-              </div>
-            </div>
-          </div>
+           
+           
+          
         </div>
         <div
           id="rightMainCol"
@@ -96,28 +87,23 @@
             <h3 class="pl-2 mainPoints right">Experiences</h3>
             <ul class="listMiddle">
               <li>
-                <p> <b>1999- Currently |
-                 Hungarian Defence Forces <br> Platoon leader</b></p>
-               <span>Currently I am a platoon leader at the Hungarian Defence Forces.
-                
-               </span> 
+                <p> <b>2019- |
+                 In summer 2019, I got the opportunity to work with programming when I started my IT studies and I would like to change careers.Currently I am lerning the GIT version control lernng and Laravel framework.
+              
               </li>
               <hr>
               <li>
-                  <span>I am responsible for training a logistics group, as well as arranging, coordinating and checking its daily tasks.
-                     </span>
-                     <div id="dots"><b>.    .    .</b></div>
-                  <span>
+ 
                     I have gained useful experience in establishing effective team work and appropriate communication.
                     <br>
                     During my services abroad I had the opportunity to use both spoken and written English on a daily basis.</span>
                     <div id="dots"><b>.    .    .</b></div>
-                    In summer 2019, I got the opportunity to work with programming when I started my IT studies and I would like to change careers.
+                   
               </li>
             </ul>
           </div>
           <div class="mt-2 ml-3 col-lg-12">
-            <h3 class="pl-2 mainPoints right">Studies</h3>
+            <h3 class="pl-2 mainPoints right"> IT Studies</h3>
             <ul class="listMiddle">
               <li>
                 <p><b>(2019-2020) Checkpoint-IT Educational Center</b></p>
@@ -128,35 +114,7 @@
                   <li>Backend advanced developer(PHP-OOP,SQL,API)</li>
                 </ul>
               </li> 
-              <hr>
-              <li>
-                <p>(2009-2013)University of Szeged</p>
-                <ul>
-                  <li>Faculty of Science and Informatics</li>
-                  <li>Environmental engineer</li>
-                  <li>Condition assessment engineer</li>
-                </ul>
-              </li>
-              <hr>
-              <li>
-                <p>(1997-1999)Military Vocational School of Szentendre
-                  <ul>
-                    <li>
-                      Military Trainer
-                    </li>
-                  </ul>
-                </p>
-              </li>
-              <li>
-                <p>(1993-1997)Ványai Ambrus Secondary School of Automotive Engineering
-                  <ul>
-                    <li>
-                      Car mechanic
-                    </li>
-                  </ul>
-                </p>
-              </li>
-            </ul>
+            
           </div>
           <div class="mt-2 ml-3 col-lg-12">
               <h3 class="pl-2 mainPoints right">Technological knowledge</h3>
