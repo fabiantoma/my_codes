@@ -69,12 +69,10 @@
             <div class="m-2" >
               <h3 class="mainPoints">Hobbies</h3>
               <div class="iconContainer d-flex col-lg-12 justify-content-around">
-                <img class="icons topleft" src="img\motorcyle.jpg" alt="bike">
-              <img class="icons topright" src="img/letöltés.jpg" alt="workout">
+                
             </div>
               <div class="iconContainer d-flex  col-lg-12 justify-content-around">
-                <img class="icons bottomleft" src="img/swimming-icon-vector-2636726.jpg" alt="concert">
-                <img class="icons bottomright" src="img/daddy-bike.jpg" alt="backpack">
+                
               </div>
             </div>
           </div>
@@ -107,7 +105,7 @@
               <hr>
               <li>
    
-                     </span>
+                     
                      <div id="dots"><b>.    .    .</b></div>
                   <span>
                     I have gained useful experience in establishing effective team work and appropriate communication.
