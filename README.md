@@ -99,7 +99,7 @@
               <li>
                 <p> <b>2019- Currently |
                   <br> Aug.2019-April 2020 CheckPoint-IT-Education Center</b></p>
-                  Nowdays I am learning GIT version control system and Laravel framework.
+                  Nowadays I am learning GIT version control system and Laravel framework.
                
               </li>
               <hr>
