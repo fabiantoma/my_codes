@@ -98,7 +98,7 @@
             <ul class="listMiddle">
               <li>
                 <p> <b>2019- Currently |
-                  <br> Aug.2019-April 2020 CheckPointIT-Education Center</b></p>
+                  <br> Aug.2019-April 2020 CheckPoint-IT-Education Center</b></p>
                   Nowadays I am learning GIT version control system and Laravel framework.
                
               </li>
@@ -107,7 +107,7 @@
    
                      
                      <div id="dots"><b>.    .    .</b></div>
-                  <span>
+                 
                     I have gained useful experience in establishing effective team work and appropriate communication.
                     <br>
                     During my services abroad I had the opportunity to use both spoken and written English on a daily basis.</span>
@@ -141,13 +141,7 @@
               <li>
                 
               </li>
-              <li>
-                
-                  <ul>
-                    
-                  </ul>
-                </p>
-              </li>
+              
             </ul>
           </div>
           <div class="mt-2 ml-3 col-lg-12">
