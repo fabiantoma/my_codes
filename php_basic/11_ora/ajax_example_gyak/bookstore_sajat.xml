@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<bookstore>
+
+    <book category="cooking">
+        <title lang="en">Everyday Italian</title>
+        <author>Gaida</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+
+    <book category="children">
+
+        
+        <title lang="en">Harry Potter</title>
+            <author>J K Rowling</author>
+            <year>2005</year>
+            <price>29.99</price>
+        </book>
+
+        <title lang="en">Pál utcai fiúk</title>
+            <author>Molnár Ferenc</author>
+            <year>1875</year>
+            <price>10.99</price>
+        </book>
+      
+    </book>
+
+</bookstore>

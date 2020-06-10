@@ -1,0 +1,11 @@
+Milk,84736,2.35,9,0
+Swiss Cheese,34684,3.49,11,0
+Green Beans,23982,0.89,14,0
+Sweet Peas,21192,0.00,15,1
+Pinto Beans,38273,0.78,8,1
+Sweet Corn,48374,0.85,13,0
+Hamburger,89164,2.32,12,0
+Chicken Wings,74353,0.98,8,1
+Grape Juice,93762,2.21,7,0
+Chocolate Chips,11323,2.34,5,0
+Dish Detergent,89516,4.57,7,0

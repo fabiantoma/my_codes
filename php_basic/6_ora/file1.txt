@@ -1,0 +1,4 @@
+1|s8|samsung galaxy|120000
+2|p20|huawei|130000
+3|i10|alcatel|111100
+4|M10|Xiaomi|88000
